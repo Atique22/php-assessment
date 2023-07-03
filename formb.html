@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transport questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 300px;
+            padding: 5px;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transport questionnaire</h1>
+    <p>This form will allow you to provide feedback on the type of transport you use</p>
+    <h2>Provide your feedback</h2>
+    <form name="feedback" action="response.php" method="GET">
+        <p>
+            <label for="studentname">Enter your name:</label>
+            <input type="text" id="studentname" name="studentname">
+        </p>
+        <p>
+            <label for="travel">How did you travel today:</label>
+            <select id="travel" name="travel">
+                <option value="Train">Train</option>
+                <option value="Bus">Bus</option>
+                <option value="Walk">Walk</option>
+                <option value="Other">Other</option>
+            </select>
+        </p>
+        <p>
+            <label for="journeytime">How long did the journey take:</label>
+            <select id="journeytime" name="journeytime">
+                <option value="less">Less than 1/2 hour</option>
+                <option value="between">Between 1/2 hour and an hour</option>
+                <option value="more">More than an hour</option>
+            </select>
+        </p>
+        <p>
+            <label for="comments">Other Comments:</label>
+            <textarea id="comments" name="comments" cols="60" rows="3"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="enterresults" value="continue">
+            <input type="submit" name="enterresults" value="cancel">
+        </p>
+    </form>
+</body>
+</html>
